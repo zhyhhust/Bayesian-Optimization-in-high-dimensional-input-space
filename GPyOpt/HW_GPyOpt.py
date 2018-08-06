@@ -17,7 +17,7 @@ if __name__ == '__main__':
     domain_bounds = Data.domain_bounds
     save_report = 'report//HW_report'+str(max_iter)+'.txt'
     initial_design_numdata = 200
-    myProblem = GPyOpt.methods.BayesianOptimization(Data.objfunction,domain_bounds,acquisition_type='EI',initial_design_numdata=initial_design_numdata,initial_design_type='latin',batch_size=5,maximize=True,num_cores=30)
+    myProblem = GPyOpt.methods.BayesianOptimization(Data.objfunction,domain_bounds,acquisition_type='MPI',initial_design_numdata=initial_design_numdata,initial_design_type='latin',batch_size=5,maximize=True,num_cores=30)
     myProblem.run_optimization(max_iter,report_file = save_report, verbosity=True,evaluations_file = None)
     conver_result = 'result//HW_convergence results' +str(max_iter)+'.jpg'
     eval_result = 'result//HW_evaluations_file'+str(max_iter)+'.csv'
