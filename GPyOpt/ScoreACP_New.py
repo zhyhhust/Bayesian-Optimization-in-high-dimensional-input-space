@@ -4,6 +4,10 @@ import math
 import pandas as pd
 PI=3.1416
 class Score(object):
+    '''
+    Note that this function is to calculate the score, which is known as 
+    the objective function in this task, the function is black-box function.
+    '''
     def __init__(self):
         self.score=0
         self.RSRPThre=-105
